@@ -1,0 +1,20 @@
+{
+  "name": "actividad11-bancoestado",
+  "version": "1.0.0",
+  "description": "Administracion de clientes y cuentas (RUT/AHORRO) para BancoEstado usando un archivo JSON",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

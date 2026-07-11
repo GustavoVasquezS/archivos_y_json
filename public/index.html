@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BancoEstado - Administración de cuentas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>BancoEstado - Administración de clientes y cuentas</h1>
+
+    <section>
+        <h2>Listados</h2>
+        <button id="btnListarTodos">Listar todos los clientes</button>
+        <button id="btnListarConRut">Listar clientes con cuenta RUT</button>
+        <div id="listaClientes"></div>
+    </section>
+
+    <section>
+        <h2>Agregar cliente nuevo</h2>
+        <form id="formNuevoCliente">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="rut" placeholder="RUT (ej: 11.111.111-1)" required>
+            <select name="tipoCuenta" required>
+                <option value="RUT">Cuenta RUT</option>
+                <option value="AHORRO">Cuenta de AHORRO</option>
+            </select>
+            <input type="number" name="saldoInicial" placeholder="Saldo inicial" min="0">
+            <button type="submit">Crear cliente</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Agregar cuenta a cliente existente</h2>
+        <form id="formAgregarCuenta">
+            <select name="clienteId" id="selectClienteAgregar" required></select>
+            <select name="tipoCuenta" required>
+                <option value="rut">Cuenta RUT</option>
+                <option value="ahorro">Cuenta de AHORRO</option>
+            </select>
+            <input type="number" name="saldoInicial" placeholder="Saldo inicial" min="0">
+            <button type="submit">Agregar cuenta</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Eliminar cliente y todas sus cuentas</h2>
+        <form id="formEliminarCliente">
+            <select name="clienteId" id="selectClienteEliminar" required></select>
+            <button type="submit">Eliminar cliente</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Eliminar cuenta RUT de cliente</h2>
+        <form id="formEliminarRut">
+            <select name="clienteId" id="selectClienteEliminarRut" required></select>
+            <button type="submit">Eliminar cuenta RUT</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Eliminar cuenta de AHORRO de cliente</h2>
+        <form id="formEliminarAhorro">
+            <select name="clienteId" id="selectClienteEliminarAhorro" required></select>
+            <select name="numeroCuenta" id="selectCuentaAhorroEliminar" required></select>
+            <button type="submit">Eliminar cuenta de AHORRO</button>
+        </form>
+    </section>
+
+    <p id="mensaje"></p>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
