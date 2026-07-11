@@ -3,18 +3,27 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 16px;
-    color: #222;
+    color: #333;
+    background: #fff;
 }
 
 h1 {
-    color: #003087;
+    color: white;
+    background: linear-gradient(90deg, #E4002B 0%, #F7941D 100%);
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 section {
-    border: 1px solid #ccc;
+    border: 1px solid #f0d9c4;
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 16px;
+}
+
+section h2 {
+    color: #E4002B;
 }
 
 form {
@@ -26,26 +35,30 @@ form {
 
 input, select, button {
     padding: 6px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
 button {
-    background: #003087;
+    background: #F7941D;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
+    padding: 8px 16px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 button:hover {
-    background: #0047ab;
+    background: #E4002B;
 }
 
 article {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f0d9c4;
     padding: 8px 0;
 }
 
 #mensaje {
     font-weight: bold;
-    color: #003087;
+    color: #E4002B;
 }
